@@ -17,7 +17,7 @@ function App() {
 
         const loadedThemes = await Promise.all(
           themeFiles.map(async (file) => {
-            const response = await fetch(`/${file}`)
+            const response = await fetch(`${import.meta.env.BASE_URL}${file}`)
             return response.json()
           })
         )
@@ -44,7 +44,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/quiz" element={<HomePage themes={themes} />} />
         <Route path="/quiz/:themeTitle" element={<QuizPage themes={themes} />} />
