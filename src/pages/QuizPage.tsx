@@ -25,7 +25,7 @@ export function QuizPage({ themes }: QuizPageProps) {
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <div className="text-center space-y-4">
             <h2 className="text-2xl font-semibold">Theme not found</h2>
-            <Button onClick={() => navigate('/quiz')} variant="outline">
+            <Button onClick={() => navigate('/')} variant="outline">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Themes
             </Button>
@@ -40,7 +40,7 @@ export function QuizPage({ themes }: QuizPageProps) {
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Header */}
         <div className="mb-6 flex items-center justify-between">
-          <Button onClick={() => navigate('/quiz')} variant="outline" size="sm">
+          <Button onClick={() => navigate('/')} variant="outline" size="sm">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back
           </Button>
@@ -80,7 +80,7 @@ export function QuizPage({ themes }: QuizPageProps) {
                 Come back later for more reviews based on spaced repetition intervals.
               </p>
               <div className="flex gap-3 justify-center">
-                <Button onClick={() => navigate('/quiz')} variant="outline">
+                <Button onClick={() => navigate('/')} variant="outline">
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   Back to Themes
                 </Button>

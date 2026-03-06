@@ -45,7 +45,7 @@ export function HomePage({ themes }: HomePageProps) {
                 <Card
                   key={theme.title}
                   className="hover:shadow-lg transition-shadow cursor-pointer"
-                  onClick={() => navigate(`/quiz/${encodeURIComponent(theme.title)}`, { replace: false })}
+                  onClick={() => navigate(`/${encodeURIComponent(theme.title)}`)}
                 >
                   <CardHeader>
                     <div className="flex items-start justify-between gap-2">

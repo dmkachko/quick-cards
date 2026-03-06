@@ -46,10 +46,9 @@ function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
-        <Route path="/quiz" element={<HomePage themes={themes} />} />
-        <Route path="/quiz/:themeTitle" element={<QuizPage themes={themes} />} />
-        <Route path="/" element={<Navigate to="/quiz" replace />} />
-        <Route path="*" element={<Navigate to="/quiz" replace />} />
+        <Route path="/" element={<HomePage themes={themes} />} />
+        <Route path="/:themeTitle" element={<QuizPage themes={themes} />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   )
