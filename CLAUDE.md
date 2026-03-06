@@ -69,13 +69,16 @@ This is a **spaced repetition flashcard application** for learning and memorizat
 
 ### Routing Structure
 
-The app uses React Router with the following routes:
-- `/` - Redirects to `/quiz`
-- `/quiz` - Theme selection page with all available themes
-- `/quiz/:themeTitle` - Quiz page for a specific theme
-- Any other path redirects to `/quiz`
+The app uses React Router with a configurable base path. Routes are relative to the base:
+- `/` - Home page with theme selection cards
+- `/:themeTitle` - Quiz page for a specific theme
+- Any other path redirects to home
 
-To change the base path for deployment (e.g., `/quick-cards/`), update the `base` property in `vite.config.ts`.
+With base path `/quick-cards/`, the actual URLs are:
+- `https://yourdomain.com/quick-cards/` - Home page
+- `https://yourdomain.com/quick-cards/Azure%20Messaging%20Services%20Quiz` - Quiz page
+
+To change the base path for deployment, update the `base` property in `vite.config.ts`.
 
 ### Key Files
 
